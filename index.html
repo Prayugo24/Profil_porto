@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Protofolio Prayugo</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script>
+
+		function toggleMenu(){
+			var menu=document.getElementById('menu-3');
+			// disini pakenya pling aman internet expl >10
+			menu.classList.toggle('menu-open');
+		}
+	</script>
+</head>
+<body>
+
+	<div id="Pertama">
+	 <!-- Bagian Header menu & logo -->
+		<div id="header">
+		 <img src="background/logo.png" id="logo" alt="profil">
+		 <div id="menu">
+		 	 <img alt="background" src="background/burger_nav.png" id="nav-icon" onclick="toggleMenu();">
+		 	 <!-- membuat tombol sembunyi dengan javascript -->
+		 	 <div id="menu_text" onclick="toggleMenu();">Menu</div>
+		 	      <div class="konten" id="menu-3">
+		 	  <!-- onclik disini untuk scrol halus | yg dimaskn dlm smooth paramaternya id element-->
+						<a href="#Pertama" class="kolom_3">Hallo</a>
+						<a href="#kedua" class="kolom_3 kolom_3_tengah" onclick="return smoothScroll('kedua')">Artikel Saya</a>
+						<a href="#ketiga" class="kolom_3" onclick="return smoothScroll('ketiga')">Kontak</a>
+					</div>
+		</div>
+	 </div>
+
+		<div class="clear"></div>
+	 <!-- Bagian box lihat karya -->
+		<div class="konten">
+			<div id="box_sd">
+				<h1>Selamat Datang<br>di Website Developer</h1>
+				<a href="#kedua" onclick="return smoothScroll('kedua')">Lihat Artikel</a>
+			</div>
+		</div>
+	 </div>
+
+
+	<div id="kedua">
+		<div class="konten">
+			<h2>Artikel Saya</h2>
+			<div class="kolom_3">
+				<a href="setiap_folio.html">
+					<div class="setiap_karya_gambar">
+						<img src="background/karya1.png" alt="background">
+						<p>judul Artikel</p>
+					</div>
+				</a>
+				<p class="deskripsi">Ini deskripsi proyek dari setiap proyek yang di tampilkan</p>
+			</div>
+			<!-- kolom_3_tengah ini gunanya untuk membuat posisi di tngh pengaturan di css -->
+		<div class="kolom_3 kolom_3_tengah">
+				<a href="setiap_folio.html">
+					<div class="setiap_karya_gambar">
+						<img src="background/karya2.png" alt="background">
+						<p>Judul artikel</p>
+					</div>
+				</a>
+				<p class="deskripsi">Ini deskripsi proyek dari setiap proyek yang di tampilkan</p>
+			</div>
+		<div class="kolom_3">
+				<a href="setiap_folio.html">
+					<div class="setiap_karya_gambar">
+						<img src="background/karya3.png" alt="background">
+						<p>Judul Artikel</p>
+					</div>
+				</a>
+				<p class="deskripsi">Ini deskripsi proyek dari setiap proyek yang di tampilkan</p>
+			</div>
+			<!-- penggunaan clear biar effek float tdk menular -->
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+	<div id="ketiga">
+	<!-- Untuk Kontak -->
+		<div class="konten">
+			<h2>Kontak Saya</h2>
+		<form  novalidate onsubmit="return validasi(this)">
+			<div class="kolom_2">
+			<input type="text" placeholder="Nama" name="pesan">
+			<input type="text" placeholder="Email" name="pesan">
+			<textarea name="pesan" rows="8" cols="40" placeholder="pesan"></textarea>
+			<input type="submit" name="submit" value="kirim">
+
+		</div>
+		</form>
+		<!--untuk Map  -->
+		<div class="kolom_2">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15813.13483587383!2d110.37258589999999!3d-7.7597061499999995!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1488148223708" width="600" height="250"  style="border:0" allowfullscreen></iframe>
+		</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<!-- &copy; digunakan untuk simbol copyright -->
+			<p>&copy;Android Publisher 2017</p>
+	</div>
+
+	<!-- scrip untuk scrol -->
+	<script type="text/javascript" src="javascript/folio.js"></script>
+</body>
+</html>

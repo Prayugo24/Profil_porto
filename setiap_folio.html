@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Protofolio Prayugo</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script>
+
+		function toggleMenu(){
+			var menu=document.getElementById('menu-3');
+			// disini pakenya pling aman internet expl >10
+			menu.classList.toggle('menu-open');
+		}
+	</script>
+</head>
+<body>
+
+	<div id="Pertama">
+	 <!-- Bagian Header menu & logo -->
+		<div id="header">
+		 <img src="background/logo.png" id="logo" alt="profil">
+		 <div id="menu">
+		 	 <img alt="background" src="background/burger_nav.png" id="nav-icon" onclick="toggleMenu();">
+		 	 <!-- membuat tombol sembunyi dengan javascript -->
+		 	 <div id="menu_text" onclick="toggleMenu();">Menu</div>
+		 	      <div class="konten" id="menu-3">
+		 	  <!-- onclik disini untuk scrol halus | yg dimaskn dlm smooth paramaternya id element-->
+						<a href="index.html" class="kolom_3">Home</a>
+						<a href="#kedua" class="kolom_3 kolom_3_tengah" onclick="return smoothScroll('karya_box')" >Detail Artikel</a>
+						<a href="#ketiga" class="kolom_3" onclick="return smoothScroll('ketiga')">Kontak</a>
+					</div>
+		</div>
+ </div>
+
+
+	<div style="margin-top:50px;"></div>
+
+	<div class="konten">
+
+		<div class="panah_box panah_box_kr" onclick="ganti_sebelum()"> < </div>
+			<div id="karya_box">
+				<div id="karya_box_kr">
+					<h3>Judul Karya</h3>
+					<p class="deskripsi">Ini deskripsi proyek dari setiap proyek yang di tampilkan</p>
+				</div>
+
+				<div id="karya_box_knn">
+					<img src="background/hal_utama.png" alt="" id="target_gambar">
+				</div>
+			</div>
+		<div class="panah_box panah_box_knn" onclick="ganti_berikut()"> > </div>
+
+	<div class="clear"></div>
+	<div id="detail_artikel">
+
+
+	<div id="karya_lain">
+		<img src="background/hal_utama.png" alt="background" onclick="ganti_gambar(this)" class="0">
+		<img src="background/sublime.jpeg" alt="background" onclick="ganti_gambar(this)" class="1" >
+		<img src="background/subll.jpg" alt="background" onclick="ganti_gambar(this)" class="2">
+	</div>
+	</div>
+
+	</div>
+ </div>
+	<div class="clear"></div>
+	<div id="ketiga">
+	<!-- Untuk Kontak -->
+		<div class="konten">
+			<h2>Kontak Saya</h2>
+		<form  novalidate onsubmit="return validasi(this)">
+			<div class="kolom_2">
+			<input type="text" placeholder="Nama" name="pesan">
+			<input type="text" placeholder="Email" name="pesan">
+			<textarea name="pesan" rows="8" cols="40" placeholder="pesan"></textarea>
+			<input type="submit" name="submit" value="kirim">
+
+		</div>
+		</form>
+		<!--untuk Map  -->
+		<div class="kolom_2">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15813.13483587383!2d110.37258589999999!3d-7.7597061499999995!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1488148223708" width="600" height="250"  style="border:0" allowfullscreen></iframe>
+		</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div id="footer">
+		<!-- &copy; digunakan untuk simbol copyright -->
+			<p>&copy;Android Publisher 2017</p>
+			<script type="text/javascript" src="javascript/folio.js"></script>
+		</div>
+</body>
+</html>
